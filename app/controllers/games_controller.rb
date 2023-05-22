@@ -21,7 +21,7 @@ class GamesController < ApplicationController
     if params[:word].upcase.chars.all? { |letter| params[:word].upcase.chars.count(letter) <= @letters.upcase.chars.count(letter) } == false
       message = "Wrooooooong, you can't write #{params[:word]} from #{@letters.gsub(',', '').split(/ */).join(', ')}"
     elsif result["found"]
-      message = "well done"
+      message = "Amazing, this is your score 👇"
       score = (params[:word].length * 3 / time).round(2)
     else
       message = "Buuuh, that's not an English word"

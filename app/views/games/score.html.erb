@@ -33,12 +33,19 @@
           <div class="card my-3">
             <div class="card-body">
               <p class="card-text text-black">
+                <strong><%= @result[:score] %> Points</strong>
+              </p>
+            </div>
+          </div>
+          <div class="card my-3">
+            <div class="card-body">
+              <p class="card-text text-black">
                 Time: <%= @result[:time] %> seconds
               </p>
             </div>
           </div>
           <div class="d-flex justify-content-center">
-            <%= link_to "Play again", new_path, class: "btn btn-primary col-4 text-wrap" %>
+            <%= link_to "Play again", new_path, class: "btn btn-primary col-4 text-wrap mt-3" %>
           </div>
         </div>
       </div>
